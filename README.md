@@ -5,6 +5,29 @@ Este projeto é um sistema para gerenciar projetos e atividades, com o backend d
 ![Tela Inicial](https://github.com/vitorsorato/gerenciador-web/blob/master/gerenciador_inicio.gif)
 
 
+# Funcionalidades da Aplicação
+
+### Gerenciamento de Projetos:
+
+- **Listar Projetos**: Visualize todos os projetos existentes.
+- **Criar Projeto**: Adicione novos projetos ao sistema.
+- **Atualizar Projeto**: Modifique as informações de projetos existentes, incluindo datas e nomes.
+- **Deletar Projeto**: Remova projetos do sistema.
+
+### Gerenciamento de Atividades:
+
+- **Listar Atividades**: Visualize todas as atividades associadas a um projeto específico.
+- **Criar Atividade**: Adicione novas atividades a um projeto.
+- **Atualizar Atividade**: Modifique as informações de atividades existentes.
+- **Deletar Atividade**: Remova atividades de um projeto.
+
+### Recursos Adicionais:
+
+- **Indicador de Progresso**: Acompanhe o progresso das atividades através de uma barra de progresso em cada projeto.
+- **Modificação de Datas**: Ajuste as datas de início e término dos projetos conforme necessário.
+- **Renomeação de Projetos/Atividades**: Alterar o nome dos projetos para melhor refletir suas descrições ou status.
+
+
 ## Tecnologias
 
 - **Backend**: Node.js, Express, TypeScript, Prisma ORM, Express
