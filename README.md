@@ -27,6 +27,8 @@ Este projeto é um sistema para gerenciar projetos e atividades, com o backend d
 - **Modificação de Datas**: Ajuste as datas de início e término dos projetos conforme necessário.
 - **Renomeação de Projetos/Atividades**: Alterar o nome dos projetos para melhor refletir suas descrições ou status.
 
+## visualização em dispositivo móvel
+![Dispovitivo móvel](https://github.com/vitorsorato/gerenciador-web/blob/master/mobile.png)
 
 ## Tecnologias
 
