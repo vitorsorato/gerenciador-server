@@ -10,7 +10,7 @@ const server = http.createServer(app);
 
 app.use(cors({
   origin: ['http://localhost:3000', 'http://localhost:3001'],
-  methods: ['GET', 'POST', 'DELETE']
+  methods: ['GET', 'POST', 'DELETE', 'PUT']
 }));
 
 app.use(express.json());

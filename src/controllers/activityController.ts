@@ -28,6 +28,19 @@ class ActivityController {
     }
   }
 
+  async setCheckActivity(req: Request, res: Response) {
+    try {
+      const activity = await activityService.setCheckActivity(Number(req.params.id));
+      res.status(200).json(activity);
+    } catch (error) {
+      if (error instanceof Error) {
+        res.status(400).json({ error: error.message });
+      } else {
+        res.status(400).json({ error: 'An unexpected error occurred' });
+      }
+    }
+  }
+
   async deleteActivity(req: Request, res: Response) {
     try {
       const { id } = req.params;

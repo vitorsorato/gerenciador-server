@@ -8,8 +8,28 @@ class ActivityService {
 
   async getActivities(projectId: string): Promise<Activity[]> {
     return prisma.activity.findMany({
+      orderBy: { createdAt: 'asc' },
       where: { projectId: Number(projectId) },
     });
+  }
+
+  async setCheckActivity(id: number): Promise<Activity> {
+    const activity = await prisma.activity.findUnique({
+      where: { id },
+    });
+
+    if (!activity) {
+      throw new Error('Activity not found');
+    }
+
+    const updatedActivity = await prisma.activity.update({
+      where: { id },
+      data: { completed: !activity.completed },
+    });
+
+    console.table(updatedActivity)
+
+    return updatedActivity;
   }
 
   async deleteActivity(id: number) {

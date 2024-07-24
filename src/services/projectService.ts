@@ -8,15 +8,15 @@ class ProjectService {
 
   async getProjects(): Promise<Project[]> {
     const projects = await prisma.project.findMany({
+      orderBy: {createdAt: 'asc'},
       include: {
-        activities: true,
+        activities: {select: {completed: true}},
       },
     });
 
     return projects.map((project) => ({
       ...project,
       percentComplete: this.calculatePercentComplete(project.activities),
-      isDelayed: this.checkIfDelayed(project),
     }));
   }
 
@@ -36,14 +36,6 @@ class ProjectService {
     const total = activities.length;
     const completed = activities.filter((activity) => activity.completed).length;
     return total > 0 ? (completed / total) * 100 : 0;
-  }
-
-  private checkIfDelayed(project: any): boolean {
-    const maxEndDate = project.activities.reduce(
-      (max: Date, activity: any) => (activity.endDate > max ? activity.endDate : max),
-      new Date(0)
-    );
-    return maxEndDate > project.endDate;
   }
 }
 
