@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001'],
+  origin: ['http://localhost:3000', 'https://gerenciador-web.vercel.app'],
   methods: ['GET', 'POST', 'DELETE', 'PUT']
 }));
 
