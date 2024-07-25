@@ -41,6 +41,7 @@ Este projeto é um sistema para gerenciar projetos e atividades, com o backend d
 ## Pré-requisitos
 
 ### Backend
+https://github.com/vitorsorato/gerenciador-server
 
 | Ferramenta  | Versão Requerida |
 |-------------|------------------|
@@ -50,6 +51,7 @@ Este projeto é um sistema para gerenciar projetos e atividades, com o backend d
 | TypeScript      | 4.9.5          |
 
 ### Frontend
+https://github.com/vitorsorato/gerenciador-web
 
 | Ferramenta  | Versão Requerida |
 |-------------|------------------|
